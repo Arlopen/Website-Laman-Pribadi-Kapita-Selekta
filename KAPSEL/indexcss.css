@@ -1,0 +1,366 @@
+
+/* Reset */
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #0f172a; /* warna dark elegan */
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #1e3a8a, #0f172a);
+    color: #fff;
+    padding: 3rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: .5rem;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #facc15, #fbbf24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: .85;
+}
+
+nav {
+    background: #1e293b;
+    padding: .8rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #f1f5f9;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #facc15;
+    transform: translateY(-2px);
+}
+
+nav ul li a.active {
+    color: #38bdf8;
+    border-bottom: 2px solid #38bdf8;
+    padding-bottom: 3px;
+}
+
+/* Styling Tambahan untuk Analisis Kapita Selekta */
+.analysis-card-group h3 {
+    color: #facc15;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.analysis-card-group h4 {
+    color: #38bdf8;
+    margin-bottom: 0.5rem;
+}
+
+/* Section Dasar */
+section {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2rem;
+    background: #1e293b;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+section h2 {
+    color: #facc15;
+    margin-bottom: 1.5rem; 
+    border-bottom: 2px solid #facc15;
+    display: inline-block;
+    padding-bottom: .3rem;
+    font-size: 1.8rem;
+}
+
+/* -------------------- PROFILE SECTION (DESAIN BARU) -------------------- */
+.profile {
+    display: flex;
+    align-items: flex-start; /* Sejajarkan di atas */
+    gap: 2rem;
+}
+
+.profile img {
+    width: 200px; /* Ukuran foto sedikit diperbesar */
+    height: 200px;
+    min-width: 200px; 
+    border-radius: 10px; /* Diubah menjadi kotak melengkung */
+    object-fit: cover;
+    border: 4px solid #facc15;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease;
+}
+
+.profile img:hover {
+    transform: scale(1.03);
+}
+
+.profile-info p {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: #e2e8f0;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border: 2px solid #38bdf8;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    transform: translateY(-3px);
+}
+
+/* -------------------- SKILLS SECTION (DESAIN BARU) -------------------- */
+
+.skills-group h3 {
+    color: #38bdf8;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-left: 4px solid #facc15;
+    padding-left: 10px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding-left: 10px;
+}
+
+.skill-card {
+    background: #0f172a;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transition: transform .3s ease, box-shadow .3s ease, border 0.3s ease;
+    border: 1px solid #1e293b; 
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    border: 1px solid #38bdf8; 
+}
+
+.skill-card h3 {
+    margin-bottom: .5rem;
+    color: #e2e8f0;
+    font-size: 1.1rem;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    background: #1e293b;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 20px; 
+    margin-top: .3rem;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #22d3ee, #0ea5e9);
+    color: #0f172a; 
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 8px;
+    line-height: 20px;
+    border-radius: 20px;
+}
+
+
+/* -------------------- SWOT & PORTER Cards (GRID) -------------------- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.2rem;
+}
+
+.card {
+    background: #0f172a;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: transform .3s ease, box-shadow .3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    border-top: 3px solid #facc15; /* Garis pemisah atas */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.card h3 {
+    color: #38bdf8;
+    margin-bottom: .5rem;
+}
+
+.card p {
+    font-size: .95rem;
+    color: #e2e8f0;
+    text-align: justify;
+}
+
+
+/* -------------------- PORTFOLIO -------------------- */
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.portfolio-card {
+    background: #0f172a;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: #1e293b;
+    transition: filter 0.3s ease;
+}
+
+.portfolio-card:hover img {
+    filter: grayscale(0%);
+}
+
+.portfolio-info {
+    padding: 1rem;
+}
+
+.portfolio-info h3 {
+    color: #38bdf8;
+    margin-bottom: .5rem;
+}
+
+.portfolio-info p {
+    font-size: .95rem;
+    color: #e2e8f0;
+    text-align: justify;
+}
+
+/* -------------------- OPEN SOURCE -------------------- */
+.opensource-card {
+    background: #0f172a;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.opensource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.opensource-card i {
+    font-size: 2.5rem;
+    color: #facc15;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.opensource-card p {
+    font-size: 1rem;
+    text-align: justify;
+    color: #e2e8f0;
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #1e293b;
+    color: #f1f5f9;
+    margin-top: 2rem;
+    border-top: 2px solid #facc15;
+}
+
+/* -------------------- Responsive Design -------------------- */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    section {
+        margin: 1.5rem auto;
+        padding: 1.5rem;
+    }
+
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+
+    .skills-group h3 {
+        font-size: 1.3rem;
+    }
+}
